@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet"
+          type="text/css"
+          href="static/style.css"/>
+    <link rel="stylesheet"
+          type="text/css"
+          href="static/style_for_todo_list.css"/>
+    <title>DSC Flask wp</title>
+</head>
+
+<body>
+    <main class="new_task_box">
+        <h4> Hi {{ name }}, </h4>
+
+        <form action="{{ url_for('show_updated_todo_list') }}" method="POST">
+            <input name="new_task"
+                   type="text"
+                   placeholder="Input your new task here"
+                   aria-label="all_todos"
+                   autocomplete="on"/>
+            <button type="submit" aria-label="Make List"> Add task </button>
+        </form>
+    </main>
+</body>
+
+</html>
